@@ -1,0 +1,11 @@
+.container {
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    width: 100%;
+    min-height: 100vh;
+
+    background: linear-gradient(243.18deg, #FC5943 3.13%, #62008A 100%);
+}

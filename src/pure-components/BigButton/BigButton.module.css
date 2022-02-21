@@ -1,0 +1,29 @@
+.container {
+	border-radius: 13px;
+    background: #FFFFFF66;
+    padding: 15px;
+    margin: 10px;
+}
+
+.innerbox {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(276.23deg, #FC5943 3.13%, #62008A 100%);
+    border-radius: 13px;
+    border: solid 5px white;
+
+    min-width: 450px;
+    cursor: pointer;
+    
+    position: relative;
+}
+
+.label {
+	color: white;
+    font-size: 4.5rem;
+    font-weight: 700;
+    z-index: inherit;
+    padding: 2rem;
+}

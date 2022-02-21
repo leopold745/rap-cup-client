@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react"
+import { io } from "socket.io-client"
+import './App.css'
+import PreGame from "./containers/PreGame"
+
+const ENDPOINT = "http://127.0.0.1:3001"
 
 function App() {
+	const [socket, setSocket] = useState()
+	
+	useEffect(() => {
+		const newSocket = io(ENDPOINT)
+		setSocket(newSocket)
+		console.log("New socket set : ", newSocket)
+
+		return () => {
+			console.log("Closing the socket", newSocket) 
+			newSocket.close()
+			console.log("Socket closed", newSocket) 
+		}
+	}, []) 
+
+	useEffect(() => {
+		if (socket)
+		{
+			console.log("Socket modified", socket)
+			socket.on("connect", () => {
+				console.log("Socket connected")
+			})
+			console.log("Socket props added")
+		}
+	}, [socket])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	<PreGame/>
+  ) 
 }
 
-export default App;
+export default App
