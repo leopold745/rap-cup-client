@@ -1,9 +1,12 @@
 import React from "react"
 
-import Home from "./pre-game/Home"
+import { Outlet } from 'react-router-dom'
 
-const PreGame = () => {
-	return <Home/>
+
+const PreGame = ({ children }) => {
+	return <>
+		<Outlet/>
+	</>
 }
 
 export default PreGame

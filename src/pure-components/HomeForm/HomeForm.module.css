@@ -1,0 +1,56 @@
+.container
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	
+	border: 0.3rem solid white;
+	border-radius: 2rem;
+
+	max-height: 50vh;
+	height: 50rem;
+	min-height: 20rem; 
+
+	padding: 2rem 5rem;
+}
+
+.inputContainer
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.label
+{
+	font-size: 1.8rem;
+	font-weight: 800;
+	color: white;
+}
+
+.inputBox
+{
+	text-align: center;
+	outline: none;
+	border: none;
+	border-radius:  0.2rem;
+	background: rgba(255, 255, 255, 0.25);
+	font-size: 2.5rem;
+	max-width: 20rem;
+
+	padding: 0.5rem;
+}
+
+.btn
+{
+	border: none;
+	background: rgba(255, 255, 255, 0.25);
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: white;
+	border-radius: 0.5rem;
+	padding: 1.5rem;
+}
+
