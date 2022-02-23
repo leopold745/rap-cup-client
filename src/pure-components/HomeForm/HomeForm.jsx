@@ -7,15 +7,15 @@ const Container = ({ children }) => {
 	</div>
 }
 
-const Input = ({ label }) => {
+const Input = ({ label, onChange }) => {
 	return <div className={styles.inputContainer}>
 		<div className={styles.label}>{ label }</div>
-		<input type = 'text' className={styles.inputBox}/>
+		<input onChange = {onChange} type = 'text' className={styles.inputBox}/>
 	</div>
 }
 
-const Button = ({ children }) => {
-	return <button className={styles.btn}>{ children }</button>
+const Button = ({ children, onClick }) => {
+	return <button onClick = {onClick} className={styles.btn}>{ children }</button>
 }
 
 export {

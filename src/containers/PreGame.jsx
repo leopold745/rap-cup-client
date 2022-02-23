@@ -1,11 +1,24 @@
-import React from "react"
-
+import React, { useEffect } from "react"
 import { Outlet } from 'react-router-dom'
+import useSocket from "../hooks/useSocket"
 
+const PreGame = () => {
 
-const PreGame = ({ children }) => {
+	const socket = useSocket('ws://localhost:3001')
+
+	useEffect(() => {
+		if (socket)
+		{
+			console.log("Socket modified", socket)
+			socket.on("connect", () => {
+				console.log("Socket connected")
+			})
+			console.log("Socket props added")
+		}
+	}, [socket])
+
 	return <>
-		<Outlet/>
+		{ socket  && <Outlet context = {socket}/> }
 	</>
 }
 

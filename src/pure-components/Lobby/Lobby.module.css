@@ -1,0 +1,73 @@
+.cardContainer
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 30rem;
+	min-width: 23rem;
+}
+
+.cardContainer input {
+	display: flex;
+	outline: none;
+	border: none;
+	width: 100%;
+	height: 20%;
+	padding: 0;	
+	text-align: center;
+	color: white;
+	background: none;
+	font-size: 1.5rem;
+	margin: 1rem;
+	background-color: rgba(2, 2, 2, 0.5);
+	border-radius: 1rem;
+}
+
+.teamName
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 20%;
+	background-color: rgba(2, 2, 2, 0.5);
+	border-radius: 1rem;
+	font-size: 1.5rem;
+	color: white;
+	margin: 1rem;
+}
+
+.underContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	height: 80%;
+	flex-direction: column;
+	background: rgba(2, 2, 2, 0.5);
+	border-radius: 1rem;
+}
+
+.picture {
+	height: 7rem;
+	width: 7rem;
+	border-radius: 50%;
+	margin: 1rem;
+	background: white;
+}
+
+.label {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0.5rem;
+	/* background: linear-gradient(276.23deg, #FC5943 3.13%, #62008A 100%); */
+	border: 3px solid #FC5943AA;
+	border-radius: 0.5rem;
+	font-size: 1.7rem;
+	max-width: 12rem;
+
+	width: 80%;
+	padding: 0.3rem 1rem;
+	color: white;
+}
