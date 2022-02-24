@@ -2,7 +2,12 @@
 	border-radius: 13px;
     background: #FFFFFF66;
     padding: 15px;
-    margin: 10px;
+    margin: 20px;
+    transition: transform .5s;
+}
+
+.container:hover {
+	transform : scale(1.1);
 }
 
 .innerbox {

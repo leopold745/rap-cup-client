@@ -52,5 +52,11 @@
 	color: white;
 	border-radius: 0.5rem;
 	padding: 1.5rem;
+	transition : transform .5s;
 }
 
+.btn:hover
+{
+	cursor: pointer;
+	transform: scale(1.1);
+}
